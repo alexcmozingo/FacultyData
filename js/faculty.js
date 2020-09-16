@@ -1868,14 +1868,4 @@ var employees = [
   }
 ]
 
-var getFirstName = function(name)
-    {
-        return name.employees.firstName
-    }
-var firstNames = employees.map(getFirstName)
-d3.select("body")
-.selectAll("h2")
-.data("employees")
-.enter()
-.append("h2")
-.text(firstNames)
+
