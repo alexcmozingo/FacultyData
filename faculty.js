@@ -1867,3 +1867,15 @@ var employees = [
     photo: 'https://www.centre.edu/wp-content/uploads/connections-images/karin-young/Karin-Young_1-683x1024-9573c7b805b0d723cd99d62c1fdcab31.jpg'
   }
 ]
+
+var getFirstName = function(name)
+    {
+        return name.employees.firstName
+    }
+var firstNames = employees.map(getFirstName)
+d3.select("body")
+.selectAll("h2")
+.data("employees")
+.enter()
+.append("h2")
+.text(firstNames)
